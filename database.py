@@ -48,13 +48,13 @@ class Rectangulo:
         area = self.base() * self.altura()
         return area
 
-punto = Punto(1, 1)
-punto2= Punto(3, 5)
-print(punto.cuadrante())
-print(punto.vector(punto2))
-print(punto.distancia(punto2))
+# punto = Punto(1, 1)
+# punto2= Punto(3, 5)
+# print(punto.cuadrante())
+# print(punto.vector(punto2))
+# print(punto.distancia(punto2))
 
-rect = Rectangulo(punto, punto2)
-print(rect.base())
-print(rect.altura())
-print(rect.area())
+# rect = Rectangulo(punto, punto2)
+# print(rect.base())
+# print(rect.altura())
+# print(rect.area())
