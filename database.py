@@ -35,6 +35,11 @@ class Punto:
         distancia = math.sqrt((punto2.x - self.x)**2 + (punto2.y - self.y)**2)
         return f"La distancia que hay de ({self.x}, {self.y}) --> {punto2} = {distancia}"
     
+class Rectangulo:
+    def __init__(self, Punto1, Punto2):
+        self.Punto1 = Punto1
+        self.Punto2 = Punto2
+         
     
 punto = Punto(1, 1)
 print(punto.cuadrante())
