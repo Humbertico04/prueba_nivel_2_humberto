@@ -25,3 +25,9 @@ class Test_database(unittest.TestCase):
 
     def test_base(self):
         self.assertEqual(self.rect.base(), 3)
+
+    def test_altura(self):
+        self.assertEqual(self.rect.altura(), 2)
+
+    def test_area(self):
+        self.assertEqual(self.rect.area(), 6)
