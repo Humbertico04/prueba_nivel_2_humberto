@@ -17,3 +17,9 @@ class Test_database(unittest.TestCase):
     def test_vector(self):
         self.assertEqual(self.a.vector(self.b), "El vector que va de (2, 3) --> (5, 5) = (3, 2)")
         self.assertEqual(self.b.vector(self.a), "El vector que va de (5, 5) --> (2, 3) = (-3, -2)")
+
+    def test_distancia(self):
+        self.assertEqual(self.a.distancia(self.b), "La distancia que hay de (2, 3) --> (5, 5) = 3.605551275463989")
+        self.assertEqual(self.b.distancia(self.a), "La distancia que hay de (5, 5) --> (2, 3) = 3.605551275463989")
+
+    
