@@ -36,13 +36,19 @@ class Punto:
         return f"La distancia que hay de ({self.x}, {self.y}) --> {punto2} = {distancia}"
     
 class Rectangulo:
-    def __init__(self, Punto1, Punto2):
+    def __init__(self, Punto1=Punto(), Punto2=Punto()):
         self.Punto1 = Punto1
         self.Punto2 = Punto2
-         
+    def base(self):
+        return f"La base = {abs(self.Punto1.x - self.Punto2.x)}"
+
     
 punto = Punto(1, 1)
+punto2= Punto(3, 5)
 print(punto.cuadrante())
 print(punto.vector(3, 5))
 print(punto.distancia(2, 2))
+
+rect = Rectangulo(punto, punto2)
+print(rect.base())
 
