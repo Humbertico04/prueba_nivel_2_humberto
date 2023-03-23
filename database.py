@@ -37,8 +37,12 @@ class Rectangulo:
     def __init__(self, Punto1=Punto(), Punto2=Punto()):
         self.Punto1 = Punto1
         self.Punto2 = Punto2
+
     def base(self):
         return f"La base = {abs(self.Punto1.x - self.Punto2.x)}"
+    
+    def altura(self):
+        return f"La altura = {abs(self.Punto1.y - self.Punto2.y)}"
 
     
 punto = Punto(1, 1)
@@ -49,4 +53,4 @@ print(punto.distancia(punto2))
 
 rect = Rectangulo(punto, punto2)
 print(rect.base())
-
+print(rect.altura())
