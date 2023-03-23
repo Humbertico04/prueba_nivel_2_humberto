@@ -18,3 +18,9 @@ print(d.cuadrante())
 print(a.vector(b))
 print(b.vector(a))
 
+print(a.distancia(b))
+print(b.distancia(a))
+
+print(a.distancia(db.Punto()))
+print(b.distancia(db.Punto()))
+print(c.distancia(db.Punto()))
