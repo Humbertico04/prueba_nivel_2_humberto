@@ -1,3 +1,5 @@
+import math
+
 class Punto:
     def __init__(self, x=0, y=0):
         self.x = x
@@ -26,9 +28,14 @@ class Punto:
         punto2 = Punto(x, y)
         vectorx = punto2.x - self.x
         vectory = punto2.y - self.y
-        return f"El vector que va de ({self.x}, {self.y}) --> ({punto2.x}, {punto2.y}) = {Punto(vectorx, vectory)}"
+        return f"El vector que va de ({self.x}, {self.y}) --> {punto2} = {Punto(vectorx, vectory)}"
+    
+    def distancia(self, x=0, y=0):
+        punto2 = Punto(x, y)
+        distancia = math.sqrt((punto2.x - x)**2)
     
     
 punto = Punto(1, 1)
 print(punto.cuadrante())
-print(punto.vector())
+print(punto.vector(3, 5))
+print(2**4)
