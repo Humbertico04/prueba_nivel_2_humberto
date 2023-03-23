@@ -39,12 +39,15 @@ class Rectangulo:
         self.Punto2 = Punto2
 
     def base(self):
-        return f"La base = {abs(self.Punto1.x - self.Punto2.x)}"
+        return abs(self.Punto1.x - self.Punto2.x)
     
     def altura(self):
-        return f"La altura = {abs(self.Punto1.y - self.Punto2.y)}"
-
+        return abs(self.Punto1.y - self.Punto2.y)
     
+    def area(self):
+        area = self.base() * self.altura()
+        return area
+
 punto = Punto(1, 1)
 punto2= Punto(3, 5)
 print(punto.cuadrante())
@@ -54,3 +57,4 @@ print(punto.distancia(punto2))
 rect = Rectangulo(punto, punto2)
 print(rect.base())
 print(rect.altura())
+print(rect.area())
