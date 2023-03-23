@@ -21,7 +21,14 @@ class Punto:
             return f"El punto ({self.x}, {self.y}) está situado sobre el eje x"
         else:
             return f"El punto ({self.x}, {self.y}) está situado sobre el origen"
+        
+    def vector(self, x=0, y=0):
+        punto2 = Punto(x, y)
+        vectorx = punto2.x - self.x
+        vectory = punto2.y - self.y
+        return f"El vector que va de ({self.x}, {self.y}) --> ({punto2.x}, {punto2.y}) = {Punto(vectorx, vectory)}"
     
     
-punto = Punto()
+punto = Punto(1, 1)
 print(punto.cuadrante())
+print(punto.vector())
