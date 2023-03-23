@@ -32,10 +32,12 @@ class Punto:
     
     def distancia(self, x=0, y=0):
         punto2 = Punto(x, y)
-        distancia = math.sqrt((punto2.x - x)**2)
+        distancia = math.sqrt((punto2.x - self.x)**2 + (punto2.y - self.y)**2)
+        return f"La distancia que hay de ({self.x}, {self.y}) --> {punto2} = {distancia}"
     
     
 punto = Punto(1, 1)
 print(punto.cuadrante())
 print(punto.vector(3, 5))
-print(2**4)
+print(punto.distancia(2, 2))
+
