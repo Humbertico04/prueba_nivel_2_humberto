@@ -7,6 +7,7 @@ class Test_database(unittest.TestCase):
         self.b = db.Punto(5, 5)
         self.c = db.Punto(-3, -1)
         self.d = db.Punto(0, 0)
+        self.rect = db.Rectangulo(self.a, self.b)
 
     def test_cuadrante(self):
         self.assertEqual(self.a.cuadrante(), "El punto (2, 3) está situado en el primer cuadrante")
@@ -22,4 +23,5 @@ class Test_database(unittest.TestCase):
         self.assertEqual(self.a.distancia(self.b), "La distancia que hay de (2, 3) --> (5, 5) = 3.605551275463989")
         self.assertEqual(self.b.distancia(self.a), "La distancia que hay de (5, 5) --> (2, 3) = 3.605551275463989")
 
-    
+    def test_base(self):
+        self.assertEqual(self.rect.base(), 3)
