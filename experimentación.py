@@ -1,9 +1,3 @@
-# • (Optativo) Consulta la distancia entre los puntos 'A y B' y 'B y A'.
-# • (Optativo) Determina cual de los 3 puntos A, B o C, se encuentra más
-# lejos del origen, punto (0,0).
-# • Crea un rectángulo utilizando los puntos A y B.
-# • Consulta la base, altura y área del rectángulo.
-
 import database as db
 
 a = db.Punto(2, 3)
@@ -24,3 +18,8 @@ print(b.distancia(a))
 print(a.distancia(db.Punto()))
 print(b.distancia(db.Punto()))
 print(c.distancia(db.Punto()))
+
+rect = db.Rectangulo(a, b)
+print(f"La base del rectangulo = {rect.base()}")
+print(f"La altura del rectangulo = {rect.altura()}")
+print(f"El area del rectangulo = {rect.area()}")
